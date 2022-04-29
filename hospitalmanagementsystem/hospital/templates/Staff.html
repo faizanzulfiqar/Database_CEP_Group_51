@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Insert New Record</title>
+</head>
+<body>
+    <h1>Create a new Record Insert into MySQL</h1>
+    <h2>Python Django web Programming</h2>
+    <hr/>
+    <form method="post">
+        {% csrf_token %}
+    Staff ID: <input type="number" placeholder="Enter Staff ID" name="staff_id" required/><br/>
+    Staff First Name: <input type="text" placeholder="Enter Staff First Name" name="fname" required/><br/>
+    Staff  Last Name: <input type="text" placeholder="Enter Staff Last Name" name="lname" required/><br/>
+    Address : <input type="text" placeholder="Enter the Address" name="address" required/><br/>    
+    Gender : <input type="text" placeholder="Enter the gender" name="gender" required/><br/>
+    Phone Number : <input type="text" placeholder="Enter Phone Number" name="phone_no" required/><br/>
+    <input type="submit" value="Insert Record"/>
+    {% if messages %}
+    {% for message in messages %}
+        <h2 style="color: crimson;">{{message}}</h2>
+    {% endfor %}
+    {% endif %}
+    </form>
+    <hr/>
+</body>
+</html>
